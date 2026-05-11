@@ -86,13 +86,41 @@ function downloadResume() {
                 link.click();
                 document.body.removeChild(link);
             } else {
-                alert('Resume file not found. Please contact me at harsh45.sh@gmail.com for a copy of my resume.');
+                openResumeViewer();
             }
         })
         .catch(() => {
-            alert('Resume file not found. Please contact me at harsh45.sh@gmail.com for a copy of my resume.');
+            openResumeViewer();
         });
 }
+
+// Resume viewer functions
+function openResumeViewer() {
+    const overlay = document.getElementById('resumeOverlay');
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeResumeViewer(event) {
+    if (event && event.target !== event.currentTarget) return;
+    const overlay = document.getElementById('resumeOverlay');
+    overlay.classList.remove('active');
+    document.body.style.overflow = '';
+}
+
+function printResume() {
+    window.print();
+}
+
+// Close resume viewer with Escape key
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        const overlay = document.getElementById('resumeOverlay');
+        if (overlay.classList.contains('active')) {
+            closeResumeViewer();
+        }
+    }
+});
 
 // Scroll to section function
 function scrollToSection(sectionId) {
