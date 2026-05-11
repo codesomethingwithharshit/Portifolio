@@ -204,7 +204,7 @@ body::after {
 .logo {
 	display: flex;
 	align-items: center;
-	gap: 12px;
+	gap: px;
 	text-decoration: none;
 	margin-top: 18px;
 }
@@ -347,6 +347,7 @@ section[id] {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	margin-top: 20px;
 	position: relative;
 	padding: 100px 20px 60px;
 	background: radial-gradient(ellipse at center,
