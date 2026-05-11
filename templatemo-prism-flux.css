@@ -360,6 +360,7 @@ section[id] {
 	height: 650px;
 	perspective: 1200px;
 	position: relative;
+	overflow: hidden;
 }
 
 .carousel {
@@ -3033,7 +3034,10 @@ a.info-item {
 	}
 	.carousel-item {
 		width: 260px;
-		height: 420px;
+		height: 500px;
+	}
+	.carousel-item .card-image {
+		height: 120px;
 	}
 	.pillar-title {
 		font-size: 18px;
