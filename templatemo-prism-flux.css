@@ -34,6 +34,7 @@ https://templatemo.com/tm-600-prism-flux
 
 html {
 	scroll-behavior: smooth;
+	overflow-x: hidden;
 }
 
 body {
@@ -205,7 +206,7 @@ body::after {
 	align-items: center;
 	gap: 12px;
 	text-decoration: none;
-	margin-top: 6px;
+	margin-top: 12px;
 }
 
 .logo-icon {
